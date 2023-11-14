@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>to do list</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        
+        <div id="new-task-button">
+            <button class="newTask" onclick="togglePopup()">
+                <span class="large-text">+ </span>
+                <span class="small-text">New Task</span>
+            </button>
+        </div>
+        
+        <div id="overlay" class="overlay">
+            <div class="popup">
+                <p>This is a popup!</p>
+                <button onclick="togglePopup()">Close</button>
+            </div>
+        </div>
+
+    </body>
+    
+    <script>
+         function togglePopup() {
+            var overlay = document.getElementById('overlay');
+            overlay.style.display = (overlay.style.display === 'flex') ? 'none' : 'flex';
+         }
+    </script>
+    
+
+</html>
